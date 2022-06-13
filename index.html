@@ -7,6 +7,71 @@
 	<title>STARTER - Toybox Homepage</title>
 </head>
 <body>
-    
+    <!-- skiplink - an anchor tag for accesibility. make invisible for sreaders. lets you skip to main content of the page. -->
+		<a href="#mainContent" class="'skip-link">Skip to main content.</a>
+
+		<!-- announcements bar -->
+		<div class="announcements">
+			<div class="wrapper"> <!-- remember to always wrap your content. note its inside the div-->
+				<p>Complimentary shipping on orders over $50. Discount applied at checkout</p>
+			</div>
+		</div>
+
+		<!-- Navigation -->
+		<nav class="navBar">
+			<div class="wrapper">
+				<!-- slide out navigation -->
+					<input type="checkbox" id="openSideMenu">
+					<label for="openSideMenu">
+						<img src="./assets/menu-button.svg" alt="Menu Button">
+					</label>
+
+					<!-- Slide Out Nav Content -->
+					<div class="slideOutNav">
+						<button>X</button>
+					</div>
+						<!-- menu content -->
+						<nav>
+							<ul class="mainMenu">
+								<li>
+									<a href="">Shop</a>
+								</li>
+								<li>
+									<a href="">About</a>
+								</li>
+								<li>
+									<a href="">FAQ</a>
+								</li>
+								<li>
+									<a href="">News</a>
+								</li>
+								<li>
+									<a href="">Contact</a>
+								</li>
+								
+							</ul>
+						</nav>
+					<!-- Nav Bar -->
+						<!-- logo -->
+					<a href="#home" class="logo">
+						<h1>Toybox</h1>
+					</a>
+
+						<!-- search/cart -->
+					<div class="searchCart">
+						<button class="menuIcon">
+							<img src="./assets/search.svg" alt="Search Icon">
+						</button>
+						<a href="#" class="bag">
+							<img src="./assets/shop-bag.svg" alt="Shopping Bag">
+						</a>
+						<div class="counter">
+							<p>0</p>
+						</div>
+					</div>
+					
+					
+			</div>
+		</nav>
 </body>
 </html>
