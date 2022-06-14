@@ -2,7 +2,82 @@
 
 @font-face{
   font-family: "Jakarta Sans";
-  src: url('../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff'),
+  src: url('../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff'), // recall we are referencing from styles.css location
   url('../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf'),
   url('../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2');
+  font-weight: normal;
 }
+
+/* importing Jakarta Sans font in bold */
+@font-face {
+  font-family: "Jakarta Sans";
+  src: url('../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff'),
+  url(../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2),
+  url(../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf);
+  // add extra urls as fallbacks
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url(../fonts/youngserif/YoungSerif-Regular.otf);
+}
+
+html {
+  font-size: 125%; //based on default browser size (16 px, therefore 20 px). 18 px is the min accessibility friendly accepted size. try not to go below it
+}
+
+body {
+  font-family: $bodyFont;
+  // use a variable so if we ever need to make changes we only need to make a single one: in _variables.scss
+
+}
+
+h1, h2, h3, h4, blockquote {
+  font-family: $headingFont; //more variable usage from _variables.scss
+  font-weight: normal;
+  color: $primary;
+  margin: 0; //headings have default margin. remove them
+}
+
+// set heading font sizes
+
+h1 {
+  font-size: 1.4rem; // based off of given font sizes in styles.scss
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2.7rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: .7rem;
+}
+
+ul,
+li,
+a,
+input {
+  margin: 0%;
+  padding: 0;
+}
+// removing default stuff
+// recall you can make a lot of this in a snippet so you don't have to set this up each time!
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
