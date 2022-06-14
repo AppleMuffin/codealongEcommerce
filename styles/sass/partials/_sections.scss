@@ -34,6 +34,7 @@
 
 // let them play
 .play {
+  margin-bottom: 0;
   background-image: url(../assets/background-image.jpg); //remember to reference from compiled styles.css
   background-position: center; //centers image to center of element its residing in
   background-size: cover;

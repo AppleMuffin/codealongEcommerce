@@ -1,0 +1,61 @@
+//you usually set 3 breakpoints for pcs, tablets and mobiles
+
+@media (max-width: 1000px) {
+  //product categories <--- commenting what youre changing can be useful
+  .items {
+    padding: 25px;
+  }
+  .footerFlexContainer {
+    flex-direction: column;
+    align-items: center;
+    .footerNav {
+      width: 100%;
+    }
+  }
+  
+} //between 1000 and 801 px, do stuff. and so on for the other queries
+
+@media (max-width: 800px) {
+  // header
+  header .wrapper {
+    flex-direction: column;
+    .headerImgContainer {
+      width: 100%;
+    // }give the parent container of img a full 100% width.
+    }
+    img {
+      width: 100%; //while baseStyles gave imgs a maxwidth of 100%, that just means it cant go over its parents width. we set width 100 here to make it take up the full width of its container
+      max-height: 350px;
+      object-fit: cover;
+      
+    }
+  }
+  .categoryList .items {
+    padding: 15px;
+  }
+
+//play section
+  .playContent {
+    width: 100%;
+    padding: 15px; //reduced the padding, incrased the width it takes up
+  }
+}
+
+@media (max-width: 500px) {
+  .categoryList .items {
+    width: 100%; //since its already flex wrapped, just make each list take up the entire row. no need to flex direction column
+    margin: 20px 15px; //were just reducing the margin the smaller the viewport we go. we just pick values taht seem right
+  }
+    //play section
+  .play .wrapper .playContent {
+    width: 100%;
+      padding: 10px 10px 15px; //reduced the padding, incrased the width it takes up. note we didnt just seclect .playContent because we had more specific selectors in our stylings elsewhere, so we had to match that specificity.
+  }
+  .footerNav nav {
+    flex-direction: column;
+  }
+  .social {
+    flex-direction: column;
+    align-items: center;
+  }
+}

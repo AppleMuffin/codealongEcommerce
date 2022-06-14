@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>STARTER - Toybox Homepage</title>
 	<link rel="stylesheet" href="./styles/styles.css">
+	<script src="https://kit.fontawesome.com/86e4cfb6fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- skiplink - an anchor tag for accesibility. make invisible for sreaders. lets you skip to main content of the page. -->
@@ -152,7 +153,7 @@
 			<div class="wrapper">
 				<div class="footerFlexContainer">
 					<!-- logo -->
-					<a href="" class="logo">
+					<a href="" class="footerLogo">
 						<h4>Toybox</h4>
 					</a>
 					
@@ -225,29 +226,29 @@
 				<div class="social">
 					<div class="socialIcons">
 						<a href="">
-							<i class="twitter" aria-hidden="true">
+							<i class="fa-brands fa-twitter" aria-hidden="true">
 								<span class="sr-only">Link to Twitter</span>
 							</i>
 							<!--for screen readers, i tags are illegible. so add a span, for sr-only, allowing them to understand what they are reading. we also add aria-hidden to the icon to hide it from assistive technology. sighted users dont see the span, AT users dont see the i tag.-->
 						</a>
 						<a href="">
-							<i class="pinterest" aria-hidden="true">
+							<i class="fa-brands fa-pinterest" aria-hidden="true"> <!--grabbed font awesome links, then added aria-hidden classes to them. for accesiibility-->
 								<span class="sr-only">Link to Pinterest</span>
 							</i>
 						</a>
 						<a href="">
-							<i class="insta" aria-hidden="true">
+							<i class="fa-brands fa-instagram" aria-hidden="true">
 								<span class="sr-only">Link to Instagram</span>
 							</i>
 						</a>
 						<a href="">
-							<i class="facebook" aria-hidden="true">
+							<i class="fa-brands fa-facebook-f" aria-hidden="true">
 								<span class="sr-only">Link to Facebook</span>
 							</i>
 						</a>
 					</div> <!-- end social icons-->
 					<div class="copyright">
-						<p class="smallCopy">© Copyright Company</p>
+							<i class="fa-solid fa-copyright"></i> Copyright Company</p>
 					</div> <!-- end copyright-->	
 				</div> <!-- end social-->
 			</div> <!-- wrapper end -->

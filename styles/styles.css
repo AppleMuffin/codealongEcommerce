@@ -547,6 +547,7 @@ header .wrapper {
 }
 
 .play {
+  margin-bottom: 0;
   background-image: url(../assets/background-image.jpg);
   background-position: center;
   background-size: cover;
@@ -572,6 +573,118 @@ header .wrapper {
   text-align: center;
 }
 
+footer {
+  background-color: #084b6d;
+  color: #fff;
+  padding: 75px;
+}
+footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footerLogo h4 {
+  color: #fff;
+}
+footer .footerNav {
+  width: 40%;
+}
+footer .footerNav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+.social i {
+  margin: 0 10px;
+}
+
+@media (max-width: 1000px) {
+  .items {
+    padding: 25px;
+  }
+
+  .footerFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footerFlexContainer .footerNav {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  header .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .wrapper .headerImgContainer {
+    width: 100%;
+  }
+  header .wrapper img {
+    width: 100%;
+    max-height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .categoryList .items {
+    padding: 15px;
+  }
+
+  .playContent {
+    width: 100%;
+    padding: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .categoryList .items {
+    width: 100%;
+    margin: 20px 15px;
+  }
+
+  .play .wrapper .playContent {
+    width: 100%;
+    padding: 10px 10px 15px;
+  }
+
+  .footerNav nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 header {
   width: 100%;
 }

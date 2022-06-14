@@ -1,0 +1,28 @@
+footer {
+  background-color: $primary;
+  color: $solidWhite;
+  padding: 75px;
+  .footerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footerLogo h4 {
+    color: $solidWhite;
+  }
+  .footerNav {
+    width: 40%; //without a width of 40% it would only take as much space as its contents held. so we made it a bit bigger to give it some space.
+    nav { 
+      display: flex; //then, the child nav flexes and spaces its children which take up the space that footerNav provided
+      justify-content: space-around;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  i {
+    margin: 0 10px;
+  }
+}
