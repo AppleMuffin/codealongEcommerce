@@ -30,6 +30,27 @@
     &:hover { //hover over lists and give it a bit of animation. note that the transition actually goes on the item, not inside these brackets
       transform: scale(.9);
     }
-    
+}
 
+// let them play
+.play {
+  background-image: url(../assets/background-image.jpg); //remember to reference from compiled styles.css
+  background-position: center; //centers image to center of element its residing in
+  background-size: cover;
+  min-height: 90vh; //is at least this big, can grow more depending on viewport
+  .wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    //above 3 properties wont change centering because the div is block, thus taking up entire row. if you reduce the width there is space for it to center horizontally.
+    // give a minheight equal to the parent container, which makes it take up the whole space. this align items to center vertically since there is space to center to
+    min-height: 90vh;
+    .playContent {
+      width: 60%; //60% of parent width, which in this case is the wrapper
+      border: 24px solid $pastelBlue;
+      background-color: $solidWhite;
+      padding: 60px;
+      text-align: center;
+    }
+  }
 }
