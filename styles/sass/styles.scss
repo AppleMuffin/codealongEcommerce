@@ -7,8 +7,10 @@
 // pastel blue: #d3f0f9 
 // white: #fff; 
 @import './partials/setup';
-@import './partials/variables';
+@import './partials/variables'; //order matters; if variables and typography were switched, it wouldnt work since typography uses some variables
 @import './partials/typography';
+@import './partials/baseStyles';
+@import './partials/nav';
 
 header {
   width: 100%;

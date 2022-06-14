@@ -1,6 +1,6 @@
 // import our font families
 
-@font-face{
+@font-face {
   font-family: "Jakarta Sans";
   src: url('../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff'), // recall we are referencing from styles.css location
   url('../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf'),
@@ -30,6 +30,7 @@ html {
 body {
   font-family: $bodyFont;
   // use a variable so if we ever need to make changes we only need to make a single one: in _variables.scss
+  color: $primary;
 
 }
 
@@ -71,6 +72,7 @@ input {
 }
 // removing default stuff
 // recall you can make a lot of this in a snippet so you don't have to set this up each time!
+//techincally input isn't involved in typography but tryna keep it DRY
 
 ul {
   list-style: none;
@@ -80,4 +82,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.smallCopy {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2rem; //joe just sorta suggested playing with these properties till you get what looks ok
+}
+
+
 

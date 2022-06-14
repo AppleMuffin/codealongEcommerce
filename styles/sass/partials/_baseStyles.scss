@@ -1,0 +1,47 @@
+//baseStyles is for like, general styling and elements with recurring styles. for example .button has two places it has similar styles so it makes sense to do it here, 
+img {
+  max-width: 100%; //forces img to always be only as big as its container. very useful default setting to have
+  display: block;
+}
+
+.wrapper {
+  max-width: 1260px; //constrain content so on wide screens its not stretched horizontally. you can decide the numner, 1280 1260 px, etc
+  width: 90%; //setting dynamic width so if its below the maxwidth it will change size
+  margin: 0 auto; //take remaining whitespace and even it out on both sides
+}
+//recall in this assignment though the picture actually spills over .wrapper. 
+
+
+// could also add padding and/or margin on top and bottom of sections as the design doc does show that
+section {
+  margin-bottom: 90px;
+}
+
+// the two button/links were given two classes, we did this so we could give them general styles but also specific stuff . this is more DRY
+.button {
+  padding: 18px 36px; //just play around with values till you get something representative. 
+  border: 2px solid $primary;
+  font-size: 0.8rem;
+  font-weight: bold; //will inherit font family from body in _typography.scss
+  text-align: center;
+  transition: 0.3s;
+}
+
+.shopButton {
+  color: $primary;
+  background-color: transparent;
+  // this notation of & is essentially the same as applying pseduo styles. focus state for tabbing into for screen users.
+  &:hover, &:focus{
+    background-color: $primary;
+    color: $solidWhite;
+  };
+}
+
+.aboutButton {
+  color: $solidWhite;
+  background-color: $primary;
+  &:hover, &:focus {
+    color: $primary;
+    background-color: transparent;
+  }
+}

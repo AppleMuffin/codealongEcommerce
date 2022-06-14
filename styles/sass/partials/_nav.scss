@@ -1,0 +1,53 @@
+//skip link
+
+.skip-link {
+  position: absolute; 
+  left: -1000px; //take it off the screen
+  top: 5px; //bring it off the edge of the screen
+  background-color: $solidWhite;
+  color: black;
+  z-index: 10;
+  &:focus {
+    left: 0;
+  }
+}
+
+.announcements {
+  text-align: center;
+  padding: 10px 0;
+}
+
+//navbar 
+.navBar {
+  position: sticky; //when assigning sticky, assign a sticking point.
+  top: 0; //when it reaches 0px from bottom it sticks
+  border-top: 1px solid rgba(8, 75 ,109, 0.08); //a designed will give you the specs on this
+  border-bottom: 1px solid rgba(8, 75, 109, 0.08);
+  //target the wrapper in navbar to flex the items
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  input[type=checkbox] {
+    opacity: 0; //dont use display none because that would essentially remove its functionality. we just want it to not be visible whilst having the functionality. we could also make this element have sr-only class, but thats not quite right since technically we do want both types of users to be able to interact with it. still works though
+    position: absolute; //remove footprint to give space to the navbar, also make it invisible
+  }
+}
+
+.searchCart {
+  display: flex;
+  .menuIcon, .bag {
+    margin-right: 15px; //we could make flex parent a bit bigger and then allow the children to flex, orrr we could just add a little margin. both work
+  }
+  .bag {
+    display: flex; //made the bag aligned. this auto sets children in a row/column
+  }
+}
+
+//slide out nav
+.slideOutNav {
+  display: none;
+}
