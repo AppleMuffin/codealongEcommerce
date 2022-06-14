@@ -24,10 +24,12 @@
   border-top: 1px solid rgba(8, 75 ,109, 0.08); //a designed will give you the specs on this
   border-bottom: 1px solid rgba(8, 75, 109, 0.08);
   //target the wrapper in navbar to flex the items
+  background-color: $solidWhite;
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
     
   }
 
@@ -42,8 +44,26 @@
   .menuIcon, .bag {
     margin-right: 15px; //we could make flex parent a bit bigger and then allow the children to flex, orrr we could just add a little margin. both work
   }
+
+  .menuIcon {
+    background-color: transparent;
+    border: none; //remove the grey background and border.
+    padding: 0;
+  }
   .bag {
     display: flex; //made the bag aligned. this auto sets children in a row/column
+  }
+  .counter {
+    display: flex; //trying to align the element correcty using flex
+    align-items: center;
+    p {
+    width: 24px;
+    height: 24px; //just adding some background stuff
+    background: $primary;
+    border-radius: 50%;
+    color: $solidWhite;
+    text-align: center;
+    }
   }
 }
 
