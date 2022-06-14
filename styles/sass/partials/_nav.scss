@@ -36,7 +36,15 @@
   input[type=checkbox] {
     opacity: 0; //dont use display none because that would essentially remove its functionality. we just want it to not be visible whilst having the functionality. we could also make this element have sr-only class, but thats not quite right since technically we do want both types of users to be able to interact with it. still works though
     position: absolute; //remove footprint to give space to the navbar, also make it invisible
+    &:checked ~ .slideOutNav {
+      //when this input is checked, do css to a different element (bring the slideout nav onto screen. The ~ is the general sibling combinator. .slideOutNav is the sibling of the input element
+      left: 0;
+      transition: .3s;
+    }
   }
+}
+.menuButton {
+  cursor: pointer;
 }
 
 .searchCart {
@@ -69,5 +77,41 @@
 
 //slide out nav
 .slideOutNav {
-  display: none;
+  background-color: $primary;
+  position: fixed;
+  top: 0;
+  left: -506px;
+  height: 100vh;
+  width: 100%; //be 100% of the screen BUT if the screen is bigger than a certain length, dont go beyond that. this makes it more adaptive to different viewports
+  max-width: 506px;
+  color: $solidWhite;
+  padding: 35px 50px;
+  transition: .75s;
+}
+
+.mainMenu {
+  a {
+    font-family: $headingFont; //via font-face in _typography.scss
+    font-size: 1.6rem; //joe got this and line height from the answer key. you just need to play with the values a bit to get it right
+    line-height: 2.5rem;
+    color: rgba($color: $solidWhite, $alpha: 1); //by adding a dollar sign you can force the r g and b value to be solidWhite. the last parameter, $alpha, refers to opacity
+    transition: 0.3s;
+      &:hover, &:focus {
+        color: rgba($color: $solidWhite, $alpha: .05)
+        
+      }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuClose {
+  color: $solidWhite;
+  font-size: 1.2rem;
+  text-align: right;
+  display: block;
+  width: 100%;
 }

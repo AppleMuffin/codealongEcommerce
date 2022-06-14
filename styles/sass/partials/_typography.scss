@@ -90,5 +90,10 @@ a {
   line-height: 1.2rem; //joe just sorta suggested playing with these properties till you get what looks ok
 }
 
-
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
