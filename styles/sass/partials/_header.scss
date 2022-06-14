@@ -1,0 +1,21 @@
+header {
+  background-color: $tertiary;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0; // how did the picture avoid staying within the wrapper boundaries? change the width and make margin 0
+  align-items: center;
+}
+
+
+.headerImgContainer {
+  width: 48%; //making it this to give it some space we can use later
+  // we could also use flex-basis: 48% which makes it equivalent to width 48% but ONLY when were in flex direction row. flexbasis sets the initial size of an element based on its parent container and also the direction of the flex. so it is more fluid which is useful in some situations but not useful in others
+}
+
+.textContainer {
+  width: 48%;
+}

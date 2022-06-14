@@ -25,6 +25,7 @@
   border-bottom: 1px solid rgba(8, 75, 109, 0.08);
   //target the wrapper in navbar to flex the items
   background-color: $solidWhite;
+  z-index: 10; //force it to stay above all other items.
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -87,6 +88,7 @@
   color: $solidWhite;
   padding: 35px 50px;
   transition: .75s;
+  // we would use JS to give the slideout manu full functionality but were only going halfway for the purposes of this lesson
 }
 
 .mainMenu {

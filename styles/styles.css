@@ -369,6 +369,7 @@ section {
   border-top: 1px solid rgba(8, 75, 109, 0.08);
   border-bottom: 1px solid rgba(8, 75, 109, 0.08);
   background-color: #fff;
+  z-index: 10;
 }
 .navBar .wrapper {
   display: -webkit-box;
@@ -472,6 +473,77 @@ section {
   text-align: right;
   display: block;
   width: 100%;
+}
+
+header {
+  background-color: #f8fbf3;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerImgContainer {
+  width: 48%;
+}
+
+.textContainer {
+  width: 48%;
+}
+
+.categoryList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item1 {
+  background-color: #ffd698;
+}
+
+.item2 {
+  background-color: #f4fcff;
+}
+
+.item3 {
+  background-color: #f8fbf3;
+}
+
+.item4 {
+  background-color: #fff5f5;
+}
+
+.items {
+  border-radius: 10%;
+  width: calc(45% - 50px);
+  margin: 50px 25px 25px;
+  padding: 40px;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.items img {
+  border-radius: 10%;
+  margin-bottom: 15px;
+}
+.items:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 header {
