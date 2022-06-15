@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="https://kit.fontawesome.com/86e4cfb6fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- skiplink - an anchor tag for accesibility. make invisible for sreaders. lets you skip to main content of the page. -->
+  <a href="#mainContent" class="skip-link">Skip to main content.</a>
+
+  <!-- announcements bar -->
+  <div class="announcements">
+    <div class="wrapper">
+      <!-- remember to always wrap your content. note its inside the div-->
+      <p class="smallCopy">Complimentary shipping on orders over $50. Discount applied at checkout</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navBar">
+    <div class="wrapper">
+      <!-- slide out navigation -->
+      <input type="checkbox" id="openSideMenu">
+      <label for="openSideMenu" class="menuButton">
+        <img src="./assets/menu-button.svg" alt="Menu Button">
+      </label>
+
+      <!-- Slide Out Nav Content -->
+      <div class="slideOutNav">
+        <div class="buttonContainer">
+          <button class="menuClose">X</button>
+        </div>
+
+        <!-- menu content -->
+        <nav>
+          <ul class="mainMenu">
+            <li>
+              <a href="">Shop</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">FAQ</a>
+            </li>
+            <li>
+              <a href="">News</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- navbar -->
+      <!-- logo -->
+      <a href="#home" class="logo">
+        <h1>Toybox</h1>
+      </a>
+
+      <!-- search/cart -->
+      <div class="searchCart">
+        <button class="menuIcon">
+          <img src="./assets/search.svg" alt="Search Icon">
+        </button>
+        <a href="#" class="bag">
+          <img src="./assets/shop-bag.svg" alt="Shopping Bag">
+        </a>
+        <div class="counter">
+          <p class="smallCopy">0</p>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- footer -->
+  <footer id="footer" class="footer">
+    <div class="wrapper">
+      <div class="footerFlexContainer">
+        <!-- logo -->
+        <a href="" class="footerLogo">
+          <h4>Toybox</h4?
+        </a>
+  
+        <div class="footerNav">
+          <nav>
+  
+            <!-- shop list -->
+            <ul class="footerList">
+              <li>
+                <h5>Shop</h5>
+              </li>
+              <li>
+                <a href="">Safari</a>
+              </li>
+              <li>
+                <a href="">Ocean</a>
+              </li>
+              <li>
+                <a href="">Dinos</a>
+              </li>
+              <li>
+                <a href="">Sale</a>
+              </li>
+            </ul>
+            <!--end shop list-->
+  
+            <!-- about List -->
+            <ul class="aboutList">
+              <li>
+                <h5>About</h5>
+              </li>
+              <li>
+                <a href="">About Us</a>
+              </li>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">News</a>
+              </li>
+              <li>
+                <a href="">Legal</a>
+              </li>
+              <li>
+                <a href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <!-- end about List-->
+  
+            <!-- Template List -->
+            <ul class="templateList">
+              <li>
+                <h5>Template</h5>
+              </li>
+              <li>
+                <a href="">Style Guide</a>
+              </li>
+              <li>
+                <a href="">Licenses</a>
+              </li>
+              <li>
+                <a href="">Changelog</a>
+              </li>
+            </ul>
+  
+          </nav>
+        </div>
+        <!--footer nav list end-->
+      </div>
+      <!--end footer flex container-->
+  
+      <!-- social icons -->
+      <div class="social">
+        <div class="socialIcons">
+          <a href="">
+            <i class="fa-brands fa-twitter" aria-hidden="true">
+              <span class="sr-only">Link to Twitter</span>
+            </i>
+            <!--for screen readers, i tags are illegible. so add a span, for sr-only, allowing them to understand what they are reading. we also add aria-hidden to the icon to hide it from assistive technology. sighted users dont see the span, AT users dont see the i tag.-->
+          </a>
+          <a href="">
+            <i class="fa-brands fa-pinterest" aria-hidden="true">
+              <!--grabbed font awesome links, then added aria-hidden classes to them. for accesiibility-->
+              <span class="sr-only">Link to Pinterest</span>
+            </i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-instagram" aria-hidden="true">
+              <span class="sr-only">Link to Instagram</span>
+            </i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true">
+              <span class="sr-only">Link to Facebook</span>
+            </i>
+          </a>
+        </div> <!-- end social icons-->
+        <div class="copyright">
+          <i class="fa-solid fa-copyright"></i> Copyright Company</p>
+        </div> <!-- end copyright-->
+      </div> <!-- end social-->
+    </div> <!-- wrapper end -->
+  
+  </footer>
+</body>
+</html>
