@@ -1,0 +1,62 @@
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin: 90px auto;
+  max-width: 1000px;
+}
+
+input, textarea {
+  border: none;
+  font-family: $bodyFont;
+  color: #333;
+  padding: 0 0 10px 5px; // give elements some inside space
+  margin-bottom: 40px; //give elements some room
+  &::placeholder { //lets you select style the placeholders in each element!
+    font-size: 0.8rem;
+    color: $primary;
+    opacity: 1; //placeholders havea default opacity, we are removing it here.
+    text-transform: uppercase;
+  }
+  &:focus {
+    border-bottom: 1px solid $primary;
+    outline: none; //toremove the default focus when youve selected an element, use :focus and outline property. remember to add a border or something else to replace the removed focus state.
+  }
+}
+
+input {
+  border-bottom: 1px solid #eee;
+}
+
+textarea {
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+select {
+  appearance: none; //remove as many browser defaults on the drop down as possible
+  border: none;
+  font-family: $bodyFont; // this doesnt change the font in the dropdown selects are weird that way
+  color: $primary;
+  background-color: $solidWhite;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #eee;
+  //note even after all these styles its not clear this is a dropdown. add a visual cue to indicate as such. we could add a background image on this element. perhaps we could also do a select::after pseudo element and add a button? but we'll do a background image. since wed have to use js or something to connect that element to the actual element
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 95%, 0;
+}
+
+option {
+  font-family: $bodyFont; //styling dropdown text doesn't really work on firefox apparently. in other words theres just some things you cant change
+}
+
+fieldset {
+  border: none; //remove fieldset default border
+  padding: 0;
+  label {
+    accent-color: $primary; //this lets you change certain control elements like checkboxes and radio
+  }
+}
