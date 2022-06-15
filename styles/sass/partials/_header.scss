@@ -19,3 +19,28 @@ header .wrapper {
 .textContainer {
   width: 48%;
 }
+
+// contact page header style
+
+.contactHeader {
+  background-color: $quaternary;
+  padding-top: 120px;
+}
+.contactHeader .wrapper {
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+//recall that pseudo elements like::after create a pseduo element that is the child of the selected element (hence the name) in css. therefore its not to be used for content, just styling since its not a real element
+.contactHeader::after {
+  content: ''; //were not adding any content here but technically we could, we could add a string for example but we want it empty in this case
+  width: 100%; //make it the full width of its parent.
+  height: 150px; //give it a height of a certain amount
+  background-image: url('../assets/wave.svg');
+  background-size: 120% 100%; //makes the background image size have the same width and heigh of the after pseudo element created.
+  background-color: $quaternary;
+  display: block; //not really it works when we add this, even esther doesnt know but there you go
+  //again, we created a fake element that kinda acts like a div after the element we selected, then styled its width and height, filled it with the svg img, gave it color. still kinda unsure how exactly itworkds like this but well there you go
+  //giving it inline-block, i think, causes an odd line at the bottom of the element because inline elements have to stay inside of its parent rather than be able to stay on the outside.
+}
