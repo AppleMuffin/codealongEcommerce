@@ -60,6 +60,7 @@
       <!-- logo -->
       <a href="#home" class="logo">
         <h1>Toybox</h1>
+        <!-- only one h1 per html page. h2s-h6s and onwards goes in order of importance. Note that the sizing doesnt matter, h6 can be bigger font size than h2 and be less syntactically important. -->
       </a>
 
       <!-- search/cart -->
@@ -78,14 +79,61 @@
     </div>
   </nav>
 
+  <!-- header -->
+  <header class="contactHeader">
+    <div class="wrapper">
+      <h5>Contact</h5>
+      <h3>We're Here to Help</h3>
+      <p>Any other questions? reach out at 
+        <a href="mailto:support@toybox.io">support@toybox.io</a> <!--note the attr here. causes default mail client to open instead of a new webpage-->
+      </p>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="contact" id="mainContent"> <!-- note class naming for main and header etc are different from the header - cause otherwise we'd be applying the same styling. skip link goes to #mainContent which is the same id for both main tags for index and contact.html, but since it's a different page this shouldnt be a problem-->
+    <div class="wrapper">
+      <form action=""> <!--action refers to what the form is going to do. not important for purposes of this exercise right now-->
+        <!--esther mentions dev like to use placeholders instead of labels in forms sometimes but this is bad practice cause its not acceptable. you can recreate this similarly except include labels and then keep them hidden excluding sr users-->
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" id="name" placeholder="Name"> <!--including a placeholder AS WELL as an sronly label for name input is good practice-->
+        <label for="surname" class="sr-only">Surname</label>
+        <input type="text" id="surname" placeholder="Surname">
+
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" placeholder="Email">
+
+        <label for="phone" class="sr-only">Phone</label>
+        <input type="tel" id="phone" placeholder="Phone">
+
+        <select name="reason" id="reason"> <!--name is more important for jS and backend stuff-->
+          <option value="placeholder" disabled selected="true">Reason for contacting</option> <!--make unselectable via attr but also the first preselected option via selected-->
+          <option value="refund">Refund request</option> <!--in real life you'll likely get a doc to fill out the values and specific reponses-->
+          <option value="status">Order status update</option>
+          <option value="praise">Praise!</option>
+          <option value="complaint">General concerns</option>
+        </select>
+
+        <label for="message" class="sr-only">Message for me</label>
+        <textarea id="message" cols="30" rows="10" placeholder="Message for me"></textarea>
+
+        <fieldset> <!--esther added a fieldset specifically for this one input but not the above. interesting-->
+          <input type="checkbox" id="terms">
+          <label for="terms">I agree to the Terms & Conditions</label>
+        </fieldset>
+      
+      </form>
+    </div>
+
+  </main>
 
   <!-- footer -->
   <footer id="footer" class="footer">
     <div class="wrapper">
       <div class="footerFlexContainer">
         <!-- logo -->
-        <a href="" class="footerLogo">
-          <h4>Toybox</h4?
+        <a href="./index.html" class="footerLogo">
+          <h4>Toybox</h4>
         </a>
   
         <div class="footerNav">
